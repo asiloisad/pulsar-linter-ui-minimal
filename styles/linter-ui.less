@@ -1,0 +1,68 @@
+@import "ui-variables";
+
+.linter-text-error {
+  text-decoration: @text-color-error dashed underline;
+}
+.linter-text-warning {
+  text-decoration: @text-color-warning dashed underline;
+}
+.linter-text-info {
+  text-decoration: @text-color-info dashed underline;
+}
+
+.linter-high-error {
+  background-color: fade(@text-color-error, 20%) !important;
+}
+.linter-high-warning {
+  background-color: fade(@text-color-warning, 20%) !important;
+}
+.linter-high-info {
+  background-color: fade(@text-color-info, 20%) !important;
+}
+
+.linter-status {
+  a {
+    padding-left: 0.5em;
+  }
+  a::before {
+    margin-right: 0.25em;
+    width: auto;
+  }
+}
+
+.linter-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: var(--editor-font-size);
+  cursor: default;
+
+  .linter-table {
+    width: 100%;
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background-color: @background-color-highlight;
+    }
+
+    tbody {
+      background-color: @base-background-color;
+    }
+
+    th, td {
+      padding: 0.3em 0.5em;
+      border: 1px solid @base-border-color;
+      border-top: 0px;
+    }
+
+    .linter-position, .linter-description {
+      cursor: pointer;
+    }
+
+    th:nth-child(1),th:nth-child(2),th:nth-child(3) {
+      width: 5%;
+      white-space: nowrap;
+    }
+  }
+}
