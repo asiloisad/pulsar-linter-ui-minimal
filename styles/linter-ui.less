@@ -1,23 +1,31 @@
 @import "ui-variables";
 
-.linter-text-error {
-  text-decoration: @text-color-error dashed underline;
-}
-.linter-text-warning {
-  text-decoration: @text-color-warning dashed underline;
-}
-.linter-text-info {
-  text-decoration: @text-color-info dashed underline;
+.linter-text {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  &.error {
+    text-decoration-color: @text-color-error;
+  }
+  &.warning {
+    text-decoration-color: @text-color-warning;
+  }
+  &.info {
+    text-decoration-color: @text-color-info;
+  }
 }
 
-.linter-high-error {
-  background-color: fade(@text-color-error, 20%) !important;
-}
-.linter-high-warning {
-  background-color: fade(@text-color-warning, 20%) !important;
-}
-.linter-high-info {
-  background-color: fade(@text-color-info, 20%) !important;
+.linter-high {
+  border-radius: 2px;
+  z-index: 10000000;
+  &.error {
+    background-color: fade(@background-color-error, 20%) !important;
+  }
+  &.warning {
+    background-color: fade(@background-color-warning, 20%);
+  }
+  &.info {
+    background-color: fade(@background-color-info, 20%);
+  }
 }
 
 .linter-status {
