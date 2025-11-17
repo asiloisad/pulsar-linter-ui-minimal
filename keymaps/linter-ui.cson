@@ -2,5 +2,5 @@
   'alt-l': 'linter-ui:toggle'
 
 'atom-text-editor:not([mini])':
-  'alt-;': 'linter-ui:scroll-next'
-  "alt-'": 'linter-ui:notify-next'
+  'alt-;': 'linter-ui:scroll'
+  "alt-'": 'linter-ui:inspect'

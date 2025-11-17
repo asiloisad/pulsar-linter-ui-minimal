@@ -1,0 +1,4 @@
+'context-menu':
+  'atom-text-editor:not([mini])': [
+    {'label': 'Inspect issue', 'command': 'linter-ui:inspect'}
+  ]
