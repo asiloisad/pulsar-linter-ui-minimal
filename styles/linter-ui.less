@@ -14,11 +14,31 @@
   }
 }
 
-.linter-high {
-  border-radius: 2px;
-  z-index: 10000000;
+.linter-bubble {
+  max-width: 500px;
+  border-radius: 3px;
+  z-index: 100;
+  background-color: @base-background-color;
+  border: 1px solid;
   &.error {
-    background-color: fade(@background-color-error, 20%) !important;
+    border-color: @background-color-error;
+  }
+  &.warning {
+    border-color: @background-color-warning;
+  }
+  &.info {
+    border-color: @background-color-info;
+  }
+  p {
+    margin: 4px;
+  }
+}
+
+.linter-high {
+  border-radius: 3px;
+  z-index: 100;
+  &.error {
+    background-color: fade(@background-color-error, 20%);
   }
   &.warning {
     background-color: fade(@background-color-warning, 20%);
@@ -70,6 +90,18 @@
     th:nth-child(1),th:nth-child(2),th:nth-child(3) {
       width: 5%;
       white-space: nowrap;
+    }
+
+    tr.current {
+      &.error {
+        background-color: fade(@background-color-error, 20%);
+      }
+      &.warning {
+        background-color: fade(@background-color-warning, 20%);
+      }
+      &.info {
+        background-color: fade(@background-color-info, 20%);
+      }
     }
   }
 }
