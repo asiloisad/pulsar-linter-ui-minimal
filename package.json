@@ -1,6 +1,6 @@
 {
   "name": "linter-ui-minimal",
-  "description": "Show linter issues",
+  "description": "Minimal UI for the Linter package",
   "repository": "https://github.com/asiloisad/pulsar-linter-ui-minimal",
   "keywords": [
     "linter",
